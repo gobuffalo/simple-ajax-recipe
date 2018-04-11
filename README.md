@@ -1,4 +1,4 @@
-# Simple Ajax Example
+# Simple Ajax Recipe
 
 This simple [Buffalo](https://gobuffalo.io) application shows how you can use the out of the box features of the [Buffalo asset pipeline](https://gobuffalo.io/en/docs/assets) to quickly add Ajax to an application.
 
@@ -8,8 +8,8 @@ This simple [Buffalo](https://gobuffalo.io) application shows how you can use th
 * Make sure your [Node](https://nodejs.org/en/) and [Yarn](https://yarnpkg.com/en/) installations are relatively up to date.
 
 ```bash
-$ go get -u -v github.com/gobuffalo/simple-ajax-example
-$ cd $GOPATH/github.com/gobuffalo/simple-ajax-example
+$ go get -u -v github.com/gobuffalo/simple-ajax-recipe
+$ cd $GOPATH/github.com/gobuffalo/simple-ajax-recipe
 $ buffalo setup
 ```
 
