@@ -1,30 +1,29 @@
-# Welcome to Buffalo!
+# Simple Ajax Example
 
-Thank you for choosing Buffalo for your web development needs.
+This simple [Buffalo](https://gobuffalo.io) application shows how you can use the out of the box features of the [Buffalo asset pipeline](https://gobuffalo.io/en/docs/assets) to quickly add Ajax to an application.
 
-## Database Setup
+## Installation and Setup
 
-It looks like you chose to set up your application using a postgres database! Fantastic!
+* Make sure you have the latest version of [Buffalo](https://gobuffalo.io) install and working.
+* Make sure your [Node](https://nodejs.org/en/) and [Yarn](https://yarnpkg.com/en/) installations are relatively up to date.
 
-The first thing you need to do is open up the "database.yml" file and edit it to use the correct usernames, passwords, hosts, etc... that are appropriate for your environment.
+```bash
+$ go get -u -v github.com/gobuffalo/simple-ajax-example
+$ cd $GOPATH/github.com/gobuffalo/simple-ajax-example
+$ buffalo setup
+```
 
-You will also need to make sure that **you** start/install the database of your choice. Buffalo **won't** install and start postgres for you.
+## Running
 
-### Create Your Databases
+Run the following command to start the Buffalo dev server and then navigate to [http://localhost:3000](http://localhost:3000). It might take a second for Node to compile the front end stuff. Sorry about that.
 
-Ok, so you've edited the "database.yml" file and started postgres, now Buffalo can create the databases in that file for you:
+```bash
+$ buffalo dev
+```
 
-	$ buffalo db create -a
+## jQuery UJS
 
-## Starting the Application
-
-Buffalo ships with a command that will watch your application and automatically rebuild the Go binary and any assets for you. To do that run the "buffalo dev" command:
-
-	$ buffalo dev
-
-If you point your browser to [http://127.0.0.1:3000](http://127.0.0.1:3000) you should see a "Welcome to Buffalo!" page.
-
-**Congratulations!** You now have your Buffalo application up and running.
+The heart of all this is in the [https://github.com/rails/jquery-ujs/wiki](https://github.com/rails/jquery-ujs/wiki) plug-in that ships with Buffalo by default.
 
 ## What Next?
 
