@@ -1,6 +1,6 @@
 # This is a multi-stage Dockerfile and requires >= Docker 17.05
 # https://docs.docker.com/engine/userguide/eng-image/multistage-build/
-FROM gobuffalo/buffalo:development as builder
+FROM gobuffalo/buffalo:v0.13.13 as builder
 
 RUN mkdir -p $GOPATH/src/github.com/gobuffalo/simple-ajax-recipe
 WORKDIR $GOPATH/src/github.com/gobuffalo/simple-ajax-recipe
@@ -11,7 +11,7 @@ ADD yarn.lock .
 RUN yarn install --no-progress
 ADD . .
 RUN go get $(go list ./... | grep -v /vendor/)
-RUN buffalo build --static -o /bin/app
+RUN GO111MODULE=on buffalo build --static -o /bin/app
 
 FROM alpine
 RUN apk add --no-cache bash
