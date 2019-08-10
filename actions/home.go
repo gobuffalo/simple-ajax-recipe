@@ -7,7 +7,7 @@ import (
 )
 
 func HomeHandler(c buffalo.Context) error {
-	return c.Render(200, r.HTML("index.html"))
+	return c.Render(200, r.HTML("index.plush.html"))
 }
 
 func TrafficCop(c buffalo.Context) error {
@@ -20,5 +20,5 @@ func TrafficCop(c buffalo.Context) error {
 		c.Set("badge", "danger")
 	}
 	c.Set("now", time.Now())
-	return c.Render(200, r.JavaScript("traffic.js"))
+	return c.Render(200, r.JavaScript("traffic.plush.js"))
 }
